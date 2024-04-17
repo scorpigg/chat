@@ -1,16 +1,16 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import './App.scss';
-import { ChatPage } from './components/ChatPage/ChatPage';
-import { LoginPage } from './components/LoginPage/LoginPage';
-import { RegistrationPage } from './components/RegistrationPage/RegistrationPage';
+import { LoginPage } from './pages/LoginPage/LoginPage';
+import { RegistrationPage } from './pages/RegistrationPage/RegistrationPage';
+import { ChatPage } from './pages/ChatPage/ChatPage';
 
-export const App = () => {
+export const AppRouter = () => {
   return (
     <div className='app'>
       <Routes>
         <Route
           path='*'
-          element={<Navigate to={'/login'} />}
+          element={<Navigate to='/login'/>}
         />
         <Route
           path='/login'
@@ -26,6 +26,7 @@ export const App = () => {
         />
       </Routes>
     </div>
+
   );
 };
 
